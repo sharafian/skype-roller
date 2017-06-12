@@ -29,5 +29,9 @@ const bot = new builder.UniversalBot(connector, function (session) {
     } 
   }
 
+  if (!results.length) {
+    return
+  }
+
   session.send("(%s; %s)", session.message.user.name, results.join(', '))
 })
