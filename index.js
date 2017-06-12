@@ -14,7 +14,6 @@ const connector = new builder.ChatConnector({
 
 server.post('/api/messages', connector.listen());
 
-// TODO: many rolls in one command
 const ROLL_REGEX = /{.+?}/g
 const bot = new builder.UniversalBot(connector, function (session) {
   const text = session.message.text
